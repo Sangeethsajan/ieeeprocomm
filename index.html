@@ -36,6 +36,122 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+<style>
+  .timeline {
+    border-left: 3px solid #727cf5;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    background: rgba(114, 124, 245, 0.09);
+    margin: 0 auto;
+    letter-spacing: 0.2px;
+    position: relative;
+    line-height: 1.4em;
+    font-size: 1.03em;
+    padding: 50px;
+    list-style: none;
+    text-align: left;
+    max-width: 40%;
+}
+
+@media (max-width: 767px) {
+    .timeline {
+        max-width: 98%;
+        padding: 25px;
+    }
+}
+
+.timeline h1 {
+    font-weight: 300;
+    font-size: 1.4em;
+}
+
+.timeline h2,
+.timeline h3 {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.timeline .event {
+    border-bottom: 1px dashed #e8ebf1;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+@media (max-width: 767px) {
+    .timeline .event {
+        padding-top: 30px;
+    }
+}
+
+.timeline .event:last-of-type {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border: none;
+}
+
+.timeline .event:before,
+.timeline .event:after {
+    position: absolute;
+    display: block;
+    top: 0;
+}
+
+.timeline .event:before {
+    left: -207px;
+    content: attr(data-date);
+    text-align: right;
+    font-weight: 100;
+    font-size: 0.9em;
+    min-width: 120px;
+}
+
+@media (max-width: 767px) {
+    .timeline .event:before {
+        left: 0px;
+        text-align: left;
+    }
+}
+
+.timeline .event:after {
+    -webkit-box-shadow: 0 0 0 3px #727cf5;
+    box-shadow: 0 0 0 5px #727cf5;
+    left: -55.8px;
+    background: #fff;
+    border-radius: 50%;
+    height: 9px;
+    width: 9px;
+    content: "";
+    top: 5px;
+}
+
+@media (max-width: 767px) {
+    .timeline .event:after {
+        left: -31.8px;
+    }
+}
+
+.rtl .timeline {
+    border-left: 0;
+    text-align: right;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    border-right: 3px solid #727cf5;
+}
+
+.rtl .timeline .event::before {
+    left: 0;
+    right: -170px;
+}
+
+.rtl .timeline .event::after {
+    left: 0;
+    right: -55.8px;
+}
+</style>
 </head>
 
 <body>
@@ -45,7 +161,7 @@
     <div class="container d-flex align-items-center">
 
       <div class="logo mr-auto">
-        <h1 class="text-light"><a href="index.html">PROCOMM</a></h1>
+        <h1 class="text-light"><img src="assets/img/PROCOM Logo White.png"></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
@@ -112,17 +228,46 @@
               PROCOMM is an online technical project contest for the students to showcase their innovative, path-breaking ideas and take them to next level.
             </p>
             <ul>
-              <li><i class="ri-check-double-line"></i><strong>Who can participate?</strong><br>PG UG students of engineering stream can participate in PROCOMM.</li>
-              <li><i class="ri-check-double-line"></i><strong>Is it a team event?</strong><br>Yes. Every team should be of 4 members.</li>
-              <li><i class="ri-check-double-line"></i><strong>How many rounds are there?</strong><br>2 rounds; 1st round: Idea Pitching, 2nd round: Presentation.</li>
+              <li><i class="ri-check-double-line"></i><strong>Who can participate?</strong><br>UG students of engineering stream can participate in PROCOMM.</li>
+              <li><i class="ri-check-double-line"></i><strong>Is it a team event?</strong><br>Yes. Every team should be of 2-4 members.</li>
+              <li><i class="ri-check-double-line"></i><strong>How many rounds are there?</strong><br>2 rounds<br> 1st round: Idea Pitching<br> 2nd round: Presentation.</li>
               <li><i class="ri-check-double-line"></i><strong>Is IEEE membership mandatory to participate in PROCOMM?</strong><br>The team lead should be IEEE Member.</li>
             </ul>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
            
-            <a href="instructions.html" class="btn-learn-more">Apply Now</a>
+            <a href="instructions.html" class="btn-learn-more my-2">Apply Now</a>
           </div>
         </div>
+        <div class="container border-2">
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="card">
+                      <div class="card-body">
+                          <div id="content">
+                              <ul class="timeline">
+                                  <li class="event" data-date="December 12 2020">
+                                      <h3>Call for Submission</h3>
+                                  </li>
+                                  <li class="event" data-date="January 12 2021">
+                                      <h3>Submission Deadline</h3>
+                                  </li>
+                                  <li class="event" data-date="January 31 2021">
+                                      <h3>Shortlisted announcement</h3>
+                                  </li>
+                                  <li class="event" data-date="February 2021">
+                                      <h3>Final Round</h3>
+                                  </li>
+                                  <li class="event" data-date="March 2021">
+                                    <h3>Final Result</h3>
+                                </li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
 
       </div>
     </section><!-- End About Section -->
@@ -183,12 +328,18 @@
       <div class="container">
 
         <div class="row" data-aos="zoom-out">
-          <div class="col-lg-9 text-center text-lg-left">
-            <h3>Call To Action</h3>
-            <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <div class="col-lg-4 text-center text-lg-left">
+            <img src="assets/img/prize.png" style="width: auto; height: 200px;">
           </div>
-          <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#">Call To Action</a>
+          <div class="col-lg-4 text-center text-lg-left">
+            <h3>Prizes</h3>
+            <p><strong>1st Prize:</strong>$200 + PLAQUE </p>
+            <p><strong>2nd Prize:</strong>$135 + PLAQUE </p>
+            <p><strong>3rd Prize:</strong>$100 + PLAQUE </p>
+            <p>$15 for each Shortlisted Projects</p>
+          </div>
+          <div class="col-lg-4 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="instructions.html">Apply Now</a>
           </div>
         </div>
 
